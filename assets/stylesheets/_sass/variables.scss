@@ -1,0 +1,27 @@
+$gradbg: linear-gradient(90deg, rgba(15,255,147,1) 0%, rgba(68,188,223,1) 100%, rgba(61,226,80,1) 100%);
+$gradbg4: linear-gradient(90deg, rgba(15,255,147,.5) 0%, rgba(68,188,223,.5) 100%, rgba(61,226,80,.5) 100%);
+$gradbg2: linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(192,203,212,1) 100%);
+$gradbg3: linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(64,69,73,1) 100%);
+$tagsbarColor: #3b4552;
+$mainbg: linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(195,192,212,1) 100%);
+$mainbg2: linear-gradient(90deg, rgba(113,143,153,1) 0%, rgba(17,66,83,1) 100%);
+$postbg: linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(195,192,212,1) 100%);
+$mainbg: linear-gradient(90deg, rgba(232,232,232,.8) 0%, rgba(195,192,212,.5) 100%);
+// $postbg: #efefef;
+$graycolor: #444;
+
+$gradientShadow: 
+linear-gradient(
+hsl(0, 0%, 0%) 0%,
+hsla(0, 0%, 0%, 0.738) 19%,
+hsla(0, 0%, 0%, 0.541) 34%,
+hsla(0, 0%, 0%, 0.382) 47%,
+hsla(0, 0%, 0%, 0.278) 56.5%,
+hsla(0, 0%, 0%, 0.194) 65%,
+hsla(0, 0%, 0%, 0.126) 73%,
+hsla(0, 0%, 0%, 0.075) 80.2%,
+hsla(0, 0%, 0%, 0.042) 86.1%,
+hsla(0, 0%, 0%, 0.021) 91%,
+hsla(0, 0%, 0%, 0.008) 95.2%,
+hsla(0, 0%, 0%, 0.002) 98.2%,
+hsla(0, 0%, 0%, 0) 100%);

@@ -1,0 +1,27 @@
+---
+layout: articles
+---
+<div class="container">
+    <div class="row">
+        <!--
+            article_page.autogen is populated by the pagination logic for all pages
+            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+        -->   
+        <p><b>Manual Pagination:</b><br>
+        {% for article_page in site.pages %}  
+        {% if article_page.title and article_page.autogen == nil and article_page.autopage == nil %}
+        <a href="{{ article_page.url | relative_url | replace: '//', '/' | replace: 'index.html', '' }}">{{ article_page.title | escape | replace: '-', '&nbsp;' }}</a>
+        {% endif %}
+        {% endfor %}
+        </p>
+        <p><b>Autopage Created:</b><br>
+        {% for article_page in site.pages %}  
+        {% if article_page.title and article_page.autogen == nil and article_page.autopage != nil %}
+        <div class="tags-container">
+            <a href="{{ article_page.url | relative_url | replace: '//', '/' | replace: 'index.html', '' }}"><div class="tags">{{ article_page.title | escape | replace: 'Posts tagged with', '' | replace: '-', '&nbsp;' }}</div></a>
+        </div>
+        {% endif %}
+        {% endfor %}
+        </p>
+    </div>
+</div>

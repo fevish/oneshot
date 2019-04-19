@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>{{ page.title }} | {{ site.title }}</title>
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+
+        <!-- OG META Tags -->
+
+        {% if page.title %}
+        <meta content="{{ page.title }}" property="og:title" />
+        {% else %}
+        <meta content="{{ site.title }}" property="og:title" />
+        {% endif %}
+
+        <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content=" "/>
+
+        <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+        <meta property="og:site_name" content="{{ site.title }}" />
+        <meta property="og:locale" content="en_US" />
+
+        {% if page.image %}
+        <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
+        <meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />
+        {% elsif page.ximage %}
+        <meta property="og:image" content="{{ page.ximage }}" />
+        <meta name="twitter:image" content="{{ page.ximage }}" />
+        {% else %}
+        <meta property="og:image" content="{{ site.url }}/assets/images/"/>
+        <meta name="twitter:image" content="{{ site.url }}/assets/images/"/>
+        {% endif %}
+
+        <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+        <meta name="twitter:card" content="summary_large_image">
+        <!--  Non-Essential, But Recommended -->
+        <meta name="twitter:image:alt" content=" " />
+
+        <!-- CSS and Favicon --> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/stylesheets/main.css" media="all" type="text/css">
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/history.js/1.8/bundled/html4+html5/jquery.history.min.js" integrity="sha256-xUq1aLc+iK9AnnYV6cZzDXASNOvp1ksTGgj8ywvvPes=" crossorigin="anonymous"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    </head>
+<body>

@@ -1,0 +1,10 @@
+{% assign myDateInSeconds = post.date | date:'%s' | times:1 %}
+{% assign myDatePlusOneDay = myDateInSeconds | plus:604800 %}
+{% assign currentDate = 'now' | date:'%s' | times:1 %}
+{% if currentDate < myDatePlusOneDay %}
+<time id="postedon" datetime="{{ post.date | date_to_xmlschema }}">
+    <span id="postedago"></span>
+</time>
+{% else %}
+{{ post.date | date: "%b %-d, %Y" }}
+{% endif %}

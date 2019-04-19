@@ -1,0 +1,22 @@
+<style>
+body:before {
+    {% if page.image %}
+    background-image: url({{ page.image }});
+    {% else %}
+    background-image: url(/assets/images/ekko-lol.jpg);
+    {% endif %}
+    content: '';
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    z-index: -3;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    pointer-events: none;
+    filter: grayscale(1);
+}
+</style>
